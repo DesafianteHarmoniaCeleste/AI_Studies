@@ -53,12 +53,32 @@ situacao(Nome, reprovado) :-
 II. Mostre as interrogações (e os resultados) para determinar:
 
 A. Quem tirou 10 na p1 e na p2?
+
+?- aluno(Nome, _, _, _, _, 10, _, 10, _, _, _).
+
 B. Quem tirou 10 no t1 e no t2?
+
+?- aluno(Nome, _, _, _, 10, _, 10, _, _, _, _).
+
 C. Quem ficou com nota abaixo da média (abaixo de 5), nas duas provas? (p1<5 e
 p2<5).
+
+?- aluno(Nome, _, _, _, _, P1, _, P2, _, _, _),
+   P1 < 5,
+   P2 < 5.
+
 D. Quem ficou com presença abaixo de 70%?
+
+?- aluno(Nome, _, _, _, _, _, _, _, _, _, Freq),
+   Freq < 70.
+   
 E. Quais foram os alunos reprovados?
+
+?- situacao(Nome, reprovado).
+
 F. Quais foram os alunos aprovados?
+
+?- situacao(Nome, aprovado).
 
 III. Indique as alterações necessárias na estrutura aluno para que seja possível fazer as
 seguintes interrogações:
