@@ -87,3 +87,15 @@ B. Quais são as informações dos alunos cujo sobrenome é X?
 C. Quem são os alunos nascidos no ano X?
 D. Quem são os alunos cujo CEP é X?
 E. Qual o número da casa do aluno X?
+
+% Para melhor visualizar os dados, devemos estruturar os dados, pois todos estao com formato string, vamos separar o nome em primeiro nome e segundo nome,
+% separar a data em dia mes e ano, separar o endereço em rua, numero e cep. 
+% considerando essa mudança temos:
+
+aluno(
+    nome(Primeiro_nome, Sobrenome),
+    endereco(Rua, Numero, CEP),
+    Telefone,
+    data(Dia, Mes, Ano),
+    T1, P1, T2, P2, Sub, Rec, Freq
+).
